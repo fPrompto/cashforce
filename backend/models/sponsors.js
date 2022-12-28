@@ -4,10 +4,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    name: {
-      allowNull: false,
-      type: Sequelize.STRING,
-    },
+    name: DataTypes.STRING,
     tradingName: DataTypes.STRING,
     cashforceTax: DataTypes.STRING,
     responsibleName: DataTypes.STRING,
