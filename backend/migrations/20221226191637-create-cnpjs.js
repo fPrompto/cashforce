@@ -25,6 +25,8 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       }
+    }, {
+      initialAutoIncrement: 437,
     });
   },
   async down(queryInterface, Sequelize) {

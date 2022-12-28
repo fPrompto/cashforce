@@ -57,6 +57,8 @@ module.exports = {
         allowNull: true,
         type: Sequelize.INTEGER(11),
       },
+    }, {
+      initialAutoIncrement: 40,
     });
   },
   async down(queryInterface, Sequelize) {

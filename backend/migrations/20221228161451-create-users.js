@@ -49,6 +49,8 @@ module.exports = {
         type: Sequelize.TINYINT,
         defaultValue: 0,
       },
+    }, {
+      initialAutoIncrement: 122,
     });
   },
   async down(queryInterface, Sequelize) {

@@ -117,6 +117,8 @@ module.exports = {
         allowNull: true,
         type: Sequelize.STRING,
       },
+    }, {
+      initialAutoIncrement: 235,
     });
   },
   async down(queryInterface, Sequelize) {
