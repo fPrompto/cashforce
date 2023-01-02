@@ -2,28 +2,40 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('orderportions', {
+    await queryInterface.createTable('users', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      nDup: {
+      name: {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      dVenc: {
+      email: {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      vDup: {
-        allowNull: false,
+      phoneNumber: {
+        allowNull: true,
         type: Sequelize.STRING,
       },
-      availableToMarket: {
+      mobile: {
+        allowNull: true,
+        type: Sequelize.STRING,
+      },
+      departament: {
+        allowNull: true,
+        type: Sequelize.STRING,
+      },
+      verificationCode: {
+        allowNull: true,
+        type: Sequelize.STRING,
+      },
+      emailChecked: {
         type: Sequelize.TINYINT,
-        defaultValue: 1,
+        defaultValue: 0,
       },
       createdAt: {
         allowNull: false,
@@ -33,21 +45,17 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      orderId: {
-        allowNull: false,
-        type: Sequelize.INTEGER(11),
-        references: {
-          key: 'id',
-          model: 'orders',
-        },
-        onDelete: 'SET NULL',
-        onUpdate: 'CASCADE',
+      cashforceAdm: {
+        type: Sequelize.TINYINT,
+        defaultValue: 0,
       },
     }, {
-      initialAutoIncrement: 612,
+      initialAutoIncrement: 122,
+      charset: 'latin1',
+      engine: 'InnoDB',
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('orderportions');
+    await queryInterface.dropTable('users');
   }
 };

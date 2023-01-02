@@ -7,7 +7,7 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       cnpj: {
         allowNull: false,
@@ -27,6 +27,8 @@ module.exports = {
       }
     }, {
       initialAutoIncrement: 437,
+      charset: 'latin1',
+      engine: 'InnoDB',
     });
   },
   async down(queryInterface, Sequelize) {

@@ -7,7 +7,7 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       orderNfId: {
         allowNull: false,
@@ -38,7 +38,7 @@ module.exports = {
         type: Sequelize.STRING,
       },
       emitedTo: {
-        allowNull: true,
+        allowNull: false,
         type: Sequelize.STRING,
       },
       nNf: {
@@ -123,6 +123,8 @@ module.exports = {
       },
     }, {
       initialAutoIncrement: 540,
+      charset: 'latin1',
+      engine: 'InnoDB',
     });
   },
   async down(queryInterface, Sequelize) {

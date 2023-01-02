@@ -7,7 +7,7 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       name: {
         allowNull: false,
@@ -104,7 +104,6 @@ module.exports = {
         onUpdate: 'CASCADE',
       },
       confirm: {
-        allowNull: true,
         type: Sequelize.TINYINT,
         defaultValue: 1,
       },
@@ -114,6 +113,8 @@ module.exports = {
       },
     }, {
       initialAutoIncrement: 152,
+      charset: 'latin1',
+      engine: 'InnoDB',
     });
   },
   async down(queryInterface, Sequelize) {

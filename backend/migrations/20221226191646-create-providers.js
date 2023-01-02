@@ -125,6 +125,8 @@ module.exports = {
       },
     }, {
       initialAutoIncrement: 235,
+      charset: 'latin1',
+      engine: 'InnoDB',
     });
   },
   async down(queryInterface, Sequelize) {
