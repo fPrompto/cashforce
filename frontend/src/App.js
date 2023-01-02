@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter, Routes, Route, Redirect,
+  BrowserRouter, Routes, Route, Navigate,
 } from 'react-router-dom';
 
 import routes from './routes';
@@ -9,10 +9,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Redirect
-          to={{
-            pathname: '/notasfiscais',
-          }}
+        <Route
+          path='/'
+          element={<Navigate to='/notasfiscais' replace />}
         />
         {routes.map((route, i) => (
           <Route
