@@ -64,18 +64,42 @@ module.exports = {
       cnpjId: {
         allowNull: true,
         type: Sequelize.INTEGER(11),
+        references: {
+          key: 'id',
+          model: 'cnpjs',
+        },
+        onDelete: 'SET NULL',
+        onUpdate: 'CASCADE',
       },
       userId: {
         allowNull: true,
         type: Sequelize.INTEGER(11),
+        references: {
+          key: 'id',
+          model: 'users',
+        },
+        onDelete: 'SET NULL',
+        onUpdate: 'CASCADE',
       },
       buyerId: {
         allowNull: true,
         type: Sequelize.INTEGER(11),
+        references: {
+          key: 'id',
+          model: 'buyers',
+        },
+        onDelete: 'SET NULL',
+        onUpdate: 'CASCADE',
       },
       providerId: {
         allowNull: true,
         type: Sequelize.INTEGER(11),
+        references: {
+          key: 'id',
+          model: 'providers',
+        },
+        onDelete: 'SET NULL',
+        onUpdate: 'CASCADE',
       },
       orderStatusBuyer: {
         type: Sequelize.STRING,

@@ -96,6 +96,12 @@ module.exports = {
       cnpjId: {
         allowNull: true,
         type: Sequelize.INTEGER(11),
+        references: {
+          key: 'id',
+          model: 'cnpjs',
+        },
+        onDelete: 'SET NULL',
+        onUpdate: 'CASCADE',
       },
       confirm: {
         allowNull: true,

@@ -52,10 +52,22 @@ module.exports = {
       orderId: {
         allowNull: true,
         type: Sequelize.INTEGER(11),
+        references: {
+          key: 'id',
+          model: 'orders',
+        },
+        onDelete: 'SET NULL',
+        onUpdate: 'CASCADE',
       },
       sponsorId: {
         allowNull: true,
         type: Sequelize.INTEGER(11),
+        references: {
+          key: 'id',
+          model: 'sponsors',
+        },
+        onDelete: 'SET NULL',
+        onUpdate: 'CASCADE',
       },
     }, {
       initialAutoIncrement: 40,

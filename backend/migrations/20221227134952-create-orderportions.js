@@ -36,6 +36,12 @@ module.exports = {
       orderId: {
         allowNull: false,
         type: Sequelize.INTEGER(11),
+        references: {
+          key: 'id',
+          model: 'orders',
+        },
+        onDelete: 'SET NULL',
+        onUpdate: 'CASCADE',
       },
     }, {
       initialAutoIncrement: 612,
