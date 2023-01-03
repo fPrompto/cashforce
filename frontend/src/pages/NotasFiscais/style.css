@@ -2,12 +2,13 @@
   width: 290px;
   height: 100vh;
   background-color: #FBFDFE;
-  margin-left: -16px;
+  margin-left: 0px;
+  margin-top: 20px;
 }
 
 .sidebar-title-img {
-  margin-left: 10px;
-  margin-bottom:24px;
+  margin-left: 26px;
+  margin-bottom:42px;
   vertical-align: middle;
 }
 
