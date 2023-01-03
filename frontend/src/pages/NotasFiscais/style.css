@@ -1,14 +1,16 @@
 .cash-sidebar {
+  display: inline-block;
   width: 290px;
   height: 100vh;
   background-color: #FBFDFE;
   margin-left: 0px;
-  margin-top: 20px;
+  float: left;
 }
 
 .sidebar-title-img {
+  margin-top: 20px;
   margin-left: 26px;
-  margin-bottom:42px;
+  margin-bottom: 42px;
   vertical-align: middle;
 }
 
@@ -33,6 +35,61 @@
   display: inline-block;
 }
 
+.title-div {
+  margin-top: 107px;
+  margin-bottom: 20px;
+}
+
 .notas-fiscais {
   height: 10px;
+}
+
+.notas-list {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.notas-img-title {
+  height: 30px;
+  margin-top: -9px;
+  margin-right: 12px;
+}
+
+.notas-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  color: #021B51;
+}
+
+.notas-subtitle {
+  color: #727D94;
+}
+
+.table-head {
+  font-size: 13px;
+  padding-right: 40px;
+  color: #A1A8B8;
+}
+
+.table-body {
+  color: #636B79;
+}
+
+.line {
+  position: absolute;
+  margin-top: 68px;
+  margin-bottom: 0px;
+  width: 100%;
+  color: #B0B2B9;
+  z-index: 3;
+}
+
+.line2 {
+  position: absolute;
+  width: 290px;
+  color: #FBFDFE;
+  z-index: 5;
+  opacity: 1;
 }
