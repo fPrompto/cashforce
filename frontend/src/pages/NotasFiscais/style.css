@@ -1,0 +1,37 @@
+.cash-sidebar {
+  width: 290px;
+  height: 100vh;
+  background-color: #FBFDFE;
+  margin-left: -16px;
+}
+
+.sidebar-title-img {
+  margin-left: 10px;
+  margin-bottom:24px;
+  vertical-align: middle;
+}
+
+.nav-div {
+  height: 53px;
+  border-left: #00AD8C 4px solid;
+  vertical-align: middle;
+}
+
+.nav-button {
+  margin-left: 20px;
+  position: relative;
+  top: 25%;
+}
+
+.sidebar-button {
+  font-style: normal;
+  font-weight: 600;
+  color: #00AD8C;
+  text-decoration: none;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.notas-fiscais {
+  height: 10px;
+}
