@@ -1,5 +1,6 @@
 const ROUTE = {
   CASHFORCE: '/',
+  FIND_ALL_ORDERS: '/find/all/orders',
 };
 
 const STATUS_CODE = {
