@@ -1,3 +1,25 @@
+const associate = (models) => {
+  models.Order.belongsTo(models.Cnpj, {
+    foreignKey: 'cnpjId',
+    as: 'cnpj',
+  });
+
+  models.Order.belongsTo(models.User, {
+    foreignKey: 'userId',
+    as: 'user',
+  });
+
+  models.Order.belongsTo(models.Buyer, {
+    foreignKey: 'buyerId',
+    as: 'buyer',
+  });
+
+  models.Order.belongsTo(models.Provider, {
+    foreignKey: 'providerId',
+    as: 'provider',
+  });
+};
+
 module.exports = (sequelize, DataTypes) => {
   const Order = sequelize.define('Order', {
     id: {
@@ -26,6 +48,8 @@ module.exports = (sequelize, DataTypes) => {
     deliveryCtrc: DataTypes.STRING,
   }, { tableName: 'orders' },
   );
+
+  Order.associate = associate;
 
   return Order;
 };

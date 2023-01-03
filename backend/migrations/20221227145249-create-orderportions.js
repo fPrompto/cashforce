@@ -42,7 +42,6 @@ module.exports = {
         },
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
-        // unique: true,
       },
     }, {
       initialAutoIncrement: 612,
