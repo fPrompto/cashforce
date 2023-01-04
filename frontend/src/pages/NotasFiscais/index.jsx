@@ -67,7 +67,7 @@ function NotasFiscais() {
             Visualize as notas fiscais que você tem.
           </span>
         </div>
-        <table>
+        <table className='cash-table'>
           <thead>
             <tr>
               {columns.map((name, i) => {
@@ -89,14 +89,24 @@ function NotasFiscais() {
               const eYear = emissionDate.getFullYear();
 
               return (
-                <tr key={i}>
-                  <td>{data.orderNfId}</td>
-                  <td>{data.buyer.name}</td>
-                  <td>{data.provider.name}</td>
-                  <td>{`${eDay}/${eMonth}/${eYear}`}</td>
-                  <td>{data.value}</td>
-                  <td>{orderStatus[+data.orderStatusBuyer]}</td>
-                </tr>
+                <>
+                  <br />
+                  <tr key={i}>
+                    <td className='body-row left-row'>{data.orderNfId}</td>
+                    <td className='body-row'>{data.buyer.name}</td>
+                    <td className='body-row'>{data.provider.name}</td>
+                    <td className='body-row'>{`${eDay}/${eMonth}/${eYear}`}</td>
+                    <td className='body-row'>{data.value}</td>
+                    <td className='body-row'>{orderStatus[+data.orderStatusBuyer]}</td>
+                    <td className='body-row right-row'>
+                      <button
+                        className='table-button'
+                      >
+                        Dados do cedente
+                      </button>
+                    </td>
+                  </tr>
+                </>
               );
             })}
           </tbody>

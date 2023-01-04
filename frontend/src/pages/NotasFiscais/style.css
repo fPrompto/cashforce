@@ -69,12 +69,26 @@
 
 .table-head {
   font-size: 13px;
-  padding-right: 70px;
+  padding-right: 23px;
+  padding-left: 28px;
   color: #A1A8B8;
 }
 
-.table-body {
-  color: #636B79;
+.body-row {
+  border-top: solid 1px #DFE2EB;
+  border-bottom: solid 1px #DFE2EB;
+  border-radius: 20px;
+  padding: 7px;
+}
+
+.left-row {
+  border-left: solid 1px #DFE2EB;
+  padding-left: 27px;
+}
+
+.right-row {
+  border-right: solid 1px #DFE2EB;
+  padding-right: 27px;
 }
 
 .line {
@@ -92,4 +106,29 @@
   color: #FBFDFE;
   z-index: 5;
   opacity: 1;
+}
+
+.table-button {
+  background-color: #ffffff;
+  border-radius: 19px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: 550;
+  padding: 5px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  margin-left: 30px;
+}
+
+.table-button:hover {
+  background-color: #f6f6f6;
+}
+
+.table-button:active {
+  position: relative;
+  top: 1px;
 }
