@@ -80,6 +80,13 @@ function NotasFiscais() {
               const eMonth = emissionDate.getMonth();
               const eYear = emissionDate.getFullYear();
 
+              const formatter = new Intl.NumberFormat('pr-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              });
+
+              const nFormat = formatter.format(data.value);
+
               return (
                 <>
                   <br />
@@ -88,7 +95,7 @@ function NotasFiscais() {
                     <td className='body-row'>{data.buyer.name}</td>
                     <td className='body-row'>{data.provider.name}</td>
                     <td className='body-row'>{`${eDay}/${eMonth}/${eYear}`}</td>
-                    <td className='body-row value-status'>{data.value}</td>
+                    <td className='body-row value-status'>{nFormat}</td>
                     <td className='body-row value-status'>{orderStatus[+data.orderStatusBuyer]}</td>
                     <td className='body-row right-row'>
                       <button
