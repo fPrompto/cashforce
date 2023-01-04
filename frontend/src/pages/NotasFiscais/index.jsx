@@ -88,8 +88,8 @@ function NotasFiscais() {
                     <td className='body-row'>{data.buyer.name}</td>
                     <td className='body-row'>{data.provider.name}</td>
                     <td className='body-row'>{`${eDay}/${eMonth}/${eYear}`}</td>
-                    <td className='body-row'>{data.value}</td>
-                    <td className='body-row'>{orderStatus[+data.orderStatusBuyer]}</td>
+                    <td className='body-row value-status'>{data.value}</td>
+                    <td className='body-row value-status'>{orderStatus[+data.orderStatusBuyer]}</td>
                     <td className='body-row right-row'>
                       <button
                         className='table-button'
