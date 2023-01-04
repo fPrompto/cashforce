@@ -1,0 +1,22 @@
+{
+  "name": "cashforce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd ./frontend && npm run start",
+    "start:backend": "cd ./backend && npm run start",
+    "db:reset": "cd ./backend && npm run db:reset"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fPrompto/cashforce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fPrompto/cashforce/issues"
+  },
+  "homepage": "https://github.com/fPrompto/cashforce#readme"
+}
