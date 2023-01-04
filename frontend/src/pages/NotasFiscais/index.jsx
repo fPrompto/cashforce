@@ -11,15 +11,6 @@ function NotasFiscais() {
   const [orderData, setOrderData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
-  const columns = [
-    'NOTA FISCAL',
-    'SACADO',
-    'CEDENTE',
-    'EMISSÃO',
-    'VALOR',
-    'STATUS',
-  ];
-
   const orderStatus = [
     'Pendente de confirmação',
     'Pedido confirmado',
@@ -70,11 +61,12 @@ function NotasFiscais() {
         <table className='cash-table'>
           <thead>
             <tr>
-              {columns.map((name, i) => {
-                return (
-                  <th key={i} className='table-head'>{name}</th>
-                );
-              })}
+              <th className='table-head head-left'>NOTA FISCAL</th>
+              <th className='table-head'>SACADO</th>
+              <th className='table-head'>CEDENTE</th>
+              <th className='table-head'>EMISSÃO</th>
+              <th className='table-head'>VALOR</th>
+              <th className='table-head'>STATUS</th>
             </tr>
           </thead>
           <tbody>

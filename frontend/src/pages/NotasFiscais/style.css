@@ -70,8 +70,12 @@
 .table-head {
   font-size: 13px;
   padding-right: 23px;
-  padding-left: 28px;
+  padding-left: 10px;
   color: #A1A8B8;
+}
+
+.head-left {
+  padding-left: 27px;
 }
 
 .body-row {
@@ -79,6 +83,7 @@
   border-bottom: solid 1px #DFE2EB;
   border-radius: 20px;
   padding: 7px;
+  padding-left: 10px;
 }
 
 .left-row {
